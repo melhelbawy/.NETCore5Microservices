@@ -11,11 +11,11 @@ namespace Catalog.API.Data
             bool exitProduct = productCollection.Find(p => true).Any();
             if (!exitProduct)
             {
-                productCollection.InsertManyAsync(GetPreConfigredProducts());
+                productCollection.InsertManyAsync(GetPreConfiguredProducts());
             }
         }
 
-        private static IEnumerable<Product> GetPreConfigredProducts()
+        private static IEnumerable<Product> GetPreConfiguredProducts()
         {
             return new List<Product>()
             {
